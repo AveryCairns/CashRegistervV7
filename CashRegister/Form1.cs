@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.Threading;
 
 // Cash Register by: Avery, Oct 13, 2017
 
@@ -90,11 +92,17 @@ namespace CashRegister
 
         private void printButton_Click(object sender, EventArgs e)
         {
+            // sound
+            SoundPlayer player = new SoundPlayer(Properties.Resources.register);
+            player.Play();
+            Thread.Sleep(1000);
+
             // Graphics set up and reciept writing
             recieptGraphics = CreateGraphics();
             Pen borderPen = new Pen(Color.Black, 1);
             SolidBrush textBrush = new SolidBrush(Color.Black);
             Font recieptFont = new Font("Consolas", 9, FontStyle.Regular);
+
             recieptGraphics.DrawRectangle(borderPen, 183, 50, 158, 270);
             recieptGraphics.DrawString("Casually Burger", recieptFont, textBrush, 210, 60);
             recieptGraphics.DrawString("Order Number 1013", recieptFont, textBrush, 190, 75);

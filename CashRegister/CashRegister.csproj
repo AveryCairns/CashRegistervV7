@@ -82,5 +82,8 @@
   <ItemGroup>
     <None Include="Resources\Matthew-Kelleigh-Mac-Town-Vol3-Happy-Burger.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\192178__sarcasticbracket__cash-register.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
