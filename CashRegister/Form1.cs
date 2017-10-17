@@ -101,7 +101,7 @@ namespace CashRegister
             recieptGraphics = CreateGraphics();
             Pen borderPen = new Pen(Color.Black, 1);
             SolidBrush textBrush = new SolidBrush(Color.Black);
-            Font recieptFont = new Font("Consolas", 9, FontStyle.Regular);
+            Font recieptFont = new Font("Consolas", 9, FontStyle.Regular); //
 
             recieptGraphics.DrawRectangle(borderPen, 183, 50, 158, 270);
             recieptGraphics.DrawString("Casually Burger", recieptFont, textBrush, 210, 60);
